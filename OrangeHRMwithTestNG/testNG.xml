@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Test Suite" verbose="2" parallel="classes"
+	thread-count="2">
+	<test name="OrangeHRM LoginTest">
+
+		<parameter name="UserName" value="Admin" />
+		<parameter name="Password" value="admin123" />
+
+		<classes>
+			<class name="testCases.LoginTest"></class>
+		</classes>
+
+	</test>
+
+	<test name="OrangeHRM AddUser">
+
+		<parameter name="empName" value="Steven Edwards" />
+		<parameter name="userName" value="Vedhagiri Vinayagam" />
+		<parameter name="passWord" value="Giri%1994" />
+		<parameter name="confPWD" value="Giri%1994" />
+		
+		<classes>
+
+			<class name="testCases.AddUser"></class>
+
+		</classes>
+
+	</test >
+
+	<test name="OrangeHRM DeleteUser">
+
+		<classes>
+
+			<class name="testCases.DeleteUser"></class>
+
+		</classes>
+
+	</test>
+
+</suite> 
