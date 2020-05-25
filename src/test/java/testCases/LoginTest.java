@@ -43,6 +43,7 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.ExtentReporter;
 
+import junit.framework.Assert;
 import pageObjects.LoginPageObject;
 
 public class LoginTest {
@@ -118,14 +119,18 @@ public class LoginTest {
 		testcase.log(Status.INFO, "Click Button Clicked");
 
 		String dashBoardUrl = driver.getCurrentUrl();
-		
-		if (dashBoardUrl.equals("https://opensource-demo.orangehrmlive.com/index.php/dashboard")) {
-			
-			testcase.log(Status.PASS, "Application Launched");
-		} else {
-			testcase.log(Status.FAIL, "Application Not Launched");
-			
-		}
+
+		Assert.assertEquals(dashBoardUrl, "No Title");
+
+		testcase.log(Status.PASS, "Application Launched");
+
+		TakesScreenshot tk = (TakesScreenshot) driver;
+		File source = tk.getScreenshotAs(OutputType.FILE);
+		File dest = new File("Sample.png");
+		FileHandler.copy(source, dest);
+		testcase.addScreenCaptureFromPath("Sample.png");
+
+		testcase.log(Status.FAIL, "Application Not Launched");
 
 	}
 

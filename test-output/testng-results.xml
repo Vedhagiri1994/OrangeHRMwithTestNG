@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="3" ignored="0" total="5" passed="2">
+<testng-results skipped="0" failed="4" ignored="0" total="5" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Test Suite" duration-ms="47942" started-at="2020-05-12T12:38:32Z" finished-at="2020-05-12T12:39:20Z">
+  <suite name="Test Suite" duration-ms="52447" started-at="2020-05-25T17:13:14Z" finished-at="2020-05-25T17:14:06Z">
     <groups>
     </groups>
-    <test name="OrangeHRM LoginTest" duration-ms="6810" started-at="2020-05-12T12:38:32Z" finished-at="2020-05-12T12:38:39Z">
+    <test name="OrangeHRM LoginTest" duration-ms="7767" started-at="2020-05-25T17:13:14Z" finished-at="2020-05-25T17:13:22Z">
       <class name="testCases.LoginTest">
-        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:testCases.LoginTest@59fa1d9b]" name="login" duration-ms="6728" started-at="2020-05-12T12:38:32Z" finished-at="2020-05-12T12:38:39Z">
+        <test-method status="FAIL" signature="login(java.lang.String, java.lang.String)[pri:0, instance:testCases.LoginTest@59fa1d9b]" name="login" duration-ms="7535" started-at="2020-05-25T17:13:14Z" finished-at="2020-05-25T17:13:22Z">
           <params>
             <param index="0">
               <value>
@@ -20,14 +20,39 @@
               </value>
             </param>
           </params>
+          <exception class="junit.framework.ComparisonFailure">
+            <message>
+              <![CDATA[expected:<https://opensource-demo.orangehrmlive.com/index.php/dashboard> but was:<No Title>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[junit.framework.ComparisonFailure: expected:<https://opensource-demo.orangehrmlive.com/index.php/dashboard> but was:<No Title>
+at junit.framework.Assert.assertEquals(Assert.java:81)
+at junit.framework.Assert.assertEquals(Assert.java:87)
+at testCases.LoginTest.login(LoginTest.java:123)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- junit.framework.ComparisonFailure -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
       </class> <!-- testCases.LoginTest -->
     </test> <!-- OrangeHRM LoginTest -->
-    <test name="OrangeHRM AddUser" duration-ms="8023" started-at="2020-05-12T12:38:39Z" finished-at="2020-05-12T12:38:47Z">
+    <test name="OrangeHRM AddUser" duration-ms="10377" started-at="2020-05-25T17:13:22Z" finished-at="2020-05-25T17:13:32Z">
       <class name="testCases.AddUser">
-        <test-method status="PASS" signature="addEmp(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testCases.AddUser@5442a311]" name="addEmp" duration-ms="7956" started-at="2020-05-12T12:38:39Z" finished-at="2020-05-12T12:38:47Z">
+        <test-method status="PASS" signature="addEmp(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testCases.AddUser@5442a311]" name="addEmp" duration-ms="10327" started-at="2020-05-25T17:13:22Z" finished-at="2020-05-25T17:13:32Z">
           <params>
             <param index="0">
               <value>
@@ -53,17 +78,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addEmp -->
-        <test-method status="FAIL" signature="login(java.lang.String, java.lang.String)[pri:0, instance:testCases.AddUser@5442a311]" name="login" duration-ms="0" started-at="2020-05-12T12:38:47Z" finished-at="2020-05-12T12:38:47Z">
+        <test-method status="FAIL" signature="login(java.lang.String, java.lang.String)[pri:0, instance:testCases.AddUser@5442a311]" name="login" duration-ms="0" started-at="2020-05-25T17:13:32Z" finished-at="2020-05-25T17:13:32Z">
           <exception class="org.testng.TestNGException">
             <message>
               <![CDATA[
 Parameter 'UserName' is required by @Test on method login but has not been marked @Optional or defined
-in E:\MavenTest\OrangeHRMwithTestNG\testNG.xml]]>
+in C:\Users\lenovo\git\OrangeHRMwithTestNG\OrangeHRMwithTestNG\testNG.xml]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.TestNGException: 
 Parameter 'UserName' is required by @Test on method login but has not been marked @Optional or defined
-in E:\MavenTest\OrangeHRMwithTestNG\testNG.xml
+in C:\Users\lenovo\git\OrangeHRMwithTestNG\OrangeHRMwithTestNG\testNG.xml
 at org.testng.internal.Parameters.createParams(Parameters.java:290)
 at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
 at org.testng.internal.Parameters.createParameters(Parameters.java:620)
@@ -84,13 +109,13 @@ at java.lang.Thread.run(Unknown Source)
         </test-method> <!-- login -->
       </class> <!-- testCases.AddUser -->
     </test> <!-- OrangeHRM AddUser -->
-    <test name="OrangeHRM DeleteUser" duration-ms="32981" started-at="2020-05-12T12:38:47Z" finished-at="2020-05-12T12:39:20Z">
+    <test name="OrangeHRM DeleteUser" duration-ms="34087" started-at="2020-05-25T17:13:32Z" finished-at="2020-05-25T17:14:06Z">
       <class name="testCases.DeleteUser">
-        <test-method status="PASS" signature="launchApp()[pri:0, instance:testCases.DeleteUser@146ba0ac]" name="launchApp" is-config="true" duration-ms="11122" started-at="2020-05-12T12:38:21Z" finished-at="2020-05-12T12:38:32Z">
+        <test-method status="PASS" signature="launchApp()[pri:0, instance:testCases.DeleteUser@146ba0ac]" name="launchApp" is-config="true" duration-ms="18343" started-at="2020-05-25T17:12:56Z" finished-at="2020-05-25T17:13:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApp -->
-        <test-method status="FAIL" signature="deleteUser()[pri:0, instance:testCases.DeleteUser@146ba0ac]" name="deleteUser" duration-ms="32866" started-at="2020-05-12T12:38:47Z" finished-at="2020-05-12T12:39:20Z">
+        <test-method status="FAIL" signature="deleteUser()[pri:0, instance:testCases.DeleteUser@146ba0ac]" name="deleteUser" duration-ms="34032" started-at="2020-05-25T17:13:32Z" finished-at="2020-05-25T17:14:06Z">
           <exception class="org.openqa.selenium.ElementNotInteractableException">
             <message>
               <![CDATA[element not interactable
@@ -98,8 +123,8 @@ at java.lang.Thread.run(Unknown Source)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
 System info: host: 'DESKTOP-HSLMIQI', ip: '192.168.43.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_77'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\lenovo\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:49790}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: f11c33bd278e03437eec9fdb0cafd04c]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\lenovo\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:54900}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: fdff33f6581bc86925d3e2143c05ef3b]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
@@ -107,8 +132,8 @@ Session ID: f11c33bd278e03437eec9fdb0cafd04c]]>
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
 System info: host: 'DESKTOP-HSLMIQI', ip: '192.168.43.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_77'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\lenovo\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:49790}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: f11c33bd278e03437eec9fdb0cafd04c
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\lenovo\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:54900}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: fdff33f6581bc86925d3e2143c05ef3b
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -147,17 +172,17 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteUser -->
-        <test-method status="FAIL" signature="login(java.lang.String, java.lang.String)[pri:0, instance:testCases.DeleteUser@146ba0ac]" name="login" duration-ms="0" started-at="2020-05-12T12:39:20Z" finished-at="2020-05-12T12:39:20Z">
+        <test-method status="FAIL" signature="login(java.lang.String, java.lang.String)[pri:0, instance:testCases.DeleteUser@146ba0ac]" name="login" duration-ms="0" started-at="2020-05-25T17:14:06Z" finished-at="2020-05-25T17:14:06Z">
           <exception class="org.testng.TestNGException">
             <message>
               <![CDATA[
 Parameter 'UserName' is required by @Test on method login but has not been marked @Optional or defined
-in E:\MavenTest\OrangeHRMwithTestNG\testNG.xml]]>
+in C:\Users\lenovo\git\OrangeHRMwithTestNG\OrangeHRMwithTestNG\testNG.xml]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.TestNGException: 
 Parameter 'UserName' is required by @Test on method login but has not been marked @Optional or defined
-in E:\MavenTest\OrangeHRMwithTestNG\testNG.xml
+in C:\Users\lenovo\git\OrangeHRMwithTestNG\OrangeHRMwithTestNG\testNG.xml
 at org.testng.internal.Parameters.createParams(Parameters.java:290)
 at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
 at org.testng.internal.Parameters.createParameters(Parameters.java:620)
@@ -176,7 +201,7 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:testCases.DeleteUser@146ba0ac]" name="quitBrowser" is-config="true" duration-ms="3294" started-at="2020-05-12T12:39:20Z" finished-at="2020-05-12T12:39:23Z">
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:testCases.DeleteUser@146ba0ac]" name="quitBrowser" is-config="true" duration-ms="5938" started-at="2020-05-25T17:14:06Z" finished-at="2020-05-25T17:14:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitBrowser -->
